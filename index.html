@@ -1559,28 +1559,35 @@
                         <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(feature.properties['fid'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['unit_spaldt'] !== null ? autolinker.link(feature.properties['unit_spaldt'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>Nama Unit SPALD-Terpusat</strong><br />' + (feature.properties['unit_spaldt'] !== null ? autolinker.link(feature.properties['unit_spaldt'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['jenis_spaldt'] !== null ? autolinker.link(feature.properties['jenis_spaldt'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Jenis SPALD-Terpusat</th>\
+                        <td>' + (feature.properties['jenis_spaldt'] !== null ? autolinker.link(feature.properties['jenis_spaldt'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['tahun_spaldt'] !== null ? autolinker.link(feature.properties['tahun_spaldt'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Tahun Bangun SPALD-Terpusat</th>\
+                        <td>' + (feature.properties['tahun_spaldt'] !== null ? autolinker.link(feature.properties['tahun_spaldt'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['pengelola_spaldt'] !== null ? autolinker.link(feature.properties['pengelola_spaldt'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Pengelola SPALD-T</th>\
+                        <td>' + (feature.properties['pengelola_spaldt'] !== null ? autolinker.link(feature.properties['pengelola_spaldt'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['kondisi_spaldt'] !== null ? autolinker.link(feature.properties['kondisi_spaldt'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Kondisi Keberfungsian SPALD-T</th>\
+                        <td>' + (feature.properties['kondisi_spaldt'] !== null ? autolinker.link(feature.properties['kondisi_spaldt'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['sumberdana_spaldt'] !== null ? autolinker.link(feature.properties['sumberdana_spaldt'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Sumber Dana Pembangunan SPALD-T</th>\
+                        <td>' + (feature.properties['sumberdana_spaldt'] !== null ? autolinker.link(feature.properties['sumberdana_spaldt'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['aset_spaldt'] !== null ? autolinker.link(feature.properties['aset_spaldt'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Status Kepemilikan Aset</th>\
+                        <td>' + (feature.properties['aset_spaldt'] !== null ? autolinker.link(feature.properties['aset_spaldt'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['foto_spaldt'] !== null ? '<img src="images/' + String(feature.properties['foto_spaldt']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
+                        <th scope="row">Foto SPALD-Terpusat</th>\
+                        <td>' + (feature.properties['foto_spaldt'] !== null ? '<img src="images/' + String(feature.properties['foto_spaldt']).replace(/[\\\/:]/g, '_').trim() + '"width="250">' : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -1614,64 +1621,82 @@
             style: style_UnitSPALDT_8_0,
         });
         bounds_group.addLayer(layer_UnitSPALDT_8);
+        map.addLayer(layer_UnitSPALDT_8);
         function pop_UnitSPALDS_9(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(feature.properties['fid'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Pemakai_SPALDS'] !== null ? autolinker.link(feature.properties['Pemakai_SPALDS'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>Nama Pemakai SPALD-Setempat</strong><br />' + (feature.properties['Pemakai_SPALDS'] !== null ? autolinker.link(feature.properties['Pemakai_SPALDS'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['jenis_spalds'] !== null ? autolinker.link(feature.properties['jenis_spalds'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Jenis SPALD-Setempat Terbangun</th>\
+                        <td>' + (feature.properties['jenis_spalds'] !== null ? autolinker.link(feature.properties['jenis_spalds'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['grease_trap'] !== null ? autolinker.link(feature.properties['grease_trap'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Terpasang Grease Trap? (Perangkap Lemak)</th>\
+                        <td>' + (feature.properties['grease_trap'] !== null ? autolinker.link(feature.properties['grease_trap'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['uk_inlet'] !== null ? autolinker.link(feature.properties['uk_inlet'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Ukuran Pipa Inlet (inci) - Masuk Ke Penampung</th>\
+                        <td>' + (feature.properties['uk_inlet'] !== null ? autolinker.link(feature.properties['uk_inlet'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['limbah_olahan'] !== null ? autolinker.link(feature.properties['limbah_olahan'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Jenis Limbah yang diolah</th>\
+                        <td>' + (feature.properties['limbah_olahan'] !== null ? autolinker.link(feature.properties['limbah_olahan'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['pengolahan_ljtn'] !== null ? autolinker.link(feature.properties['pengolahan_ljtn'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Jenis Pengolahan Lanjutan (Air Buangan Outlet)</th>\
+                        <td>' + (feature.properties['pengolahan_ljtn'] !== null ? autolinker.link(feature.properties['pengolahan_ljtn'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['jmlh_penghuni'] !== null ? autolinker.link(feature.properties['jmlh_penghuni'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Jumlah Penghuni/Pemakai</th>\
+                        <td>' + (feature.properties['jmlh_penghuni'] !== null ? autolinker.link(feature.properties['jmlh_penghuni'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['kap_m3'] !== null ? autolinker.link(feature.properties['kap_m3'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Kapasitas Pengolahan SPALD-Setempat (m3)</th>\
+                        <td>' + (feature.properties['kap_m3'] !== null ? autolinker.link(feature.properties['kap_m3'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['uk_pjg_galian'] !== null ? autolinker.link(feature.properties['uk_pjg_galian'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Ukuran Panjang Galian (m) - Jika Ada</th>\
+                        <td>' + (feature.properties['uk_pjg_galian'] !== null ? autolinker.link(feature.properties['uk_pjg_galian'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['uk_lbr_galian'] !== null ? autolinker.link(feature.properties['uk_lbr_galian'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Ukuran Lebar Galian (m) - Jika Ada</th>\
+                        <td>' + (feature.properties['uk_lbr_galian'] !== null ? autolinker.link(feature.properties['uk_lbr_galian'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['uk_tgi_galian'] !== null ? autolinker.link(feature.properties['uk_tgi_galian'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Ukuran Kedalaman Galian (m) - Jika Ada</th>\
+                        <td>' + (feature.properties['uk_tgi_galian'] !== null ? autolinker.link(feature.properties['uk_tgi_galian'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['thn_bgn'] !== null ? autolinker.link(feature.properties['thn_bgn'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Tahun Dibangun</th>\
+                        <td>' + (feature.properties['thn_bgn'] !== null ? autolinker.link(feature.properties['thn_bgn'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['tgl_sedot'] !== null ? autolinker.link(feature.properties['tgl_sedot'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Tanggal Terakhir Kali Sedot SPALD-Setempat</th>\
+                        <td>' + (feature.properties['tgl_sedot'] !== null ? autolinker.link(feature.properties['tgl_sedot'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['sumber_dana'] !== null ? autolinker.link(feature.properties['sumber_dana'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Sumber Dana</th>\
+                        <td>' + (feature.properties['sumber_dana'] !== null ? autolinker.link(feature.properties['sumber_dana'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['pemilik_aset'] !== null ? autolinker.link(feature.properties['pemilik_aset'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Status Aset SPALD-Setempat</th>\
+                        <td>' + (feature.properties['pemilik_aset'] !== null ? autolinker.link(feature.properties['pemilik_aset'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['pernah_sedot'] !== null ? autolinker.link(feature.properties['pernah_sedot'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Pernah Disedot?</th>\
+                        <td>' + (feature.properties['pernah_sedot'] !== null ? autolinker.link(feature.properties['pernah_sedot'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['foto_spalds'] !== null ? '<img src="images/' + String(feature.properties['foto_spalds']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
+                        <th scope="row">Foto SPALD-Setempat (harus landscape)</th>\
+                        <td>' + (feature.properties['foto_spalds'] !== null ? '<img src="images/' + String(feature.properties['foto_spalds']).replace(/[\\\/:]/g, '_').trim() + '"width="250">' : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['foto_rumah'] !== null ? '<img src="images/' + String(feature.properties['foto_rumah']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
+                        <th scope="row">foto_rumah</th>\
+                        <td>' + (feature.properties['foto_rumah'] !== null ? '<img src="images/' + String(feature.properties['foto_rumah']).replace(/[\\\/:]/g, '_').trim() + '"width="250">' : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
